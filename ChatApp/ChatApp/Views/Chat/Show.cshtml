@@ -1,6 +1,7 @@
 ﻿@using ChatApp.Models.Message
 @model ChatViewModel
 
+@* Messages display section: *@
 <h3>Messages</h3>
 @if(Model.Messages != null)
 {
@@ -23,6 +24,7 @@ else
 	<p>No messages yet!</p>
 }
 
+@* Messages input form: *@
 <p></p>
 <form asp-controller="Chat" asp-action="Send" method="post">
 	<div class="form-group card-header row">

@@ -1,5 +1,6 @@
 ﻿namespace ChatApp.Models.Message
 {
+    // View Model
     public class ChatViewModel
     {
         public MessageViewModel CurrentMessage { get; set; } = null!;

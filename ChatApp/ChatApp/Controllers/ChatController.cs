@@ -5,9 +5,11 @@ namespace ChatApp.Controllers
 {
     public class ChatController : Controller
     {
+        // Keeps messages' information
         private static List<KeyValuePair<string, string>> _messages =
             new List<KeyValuePair<string, string>>();
 
+        // Process view and messages information
         public IActionResult Show()
         {
             if (_messages.Count() < 1)
@@ -29,6 +31,7 @@ namespace ChatApp.Controllers
             return View(chatModel);
         }
 
+        // Post request method (takes the input data and makes a redirect to Show)
         [HttpPost]
         public IActionResult Send(ChatViewModel chat)
         {
